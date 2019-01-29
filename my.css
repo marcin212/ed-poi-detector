@@ -1,0 +1,43 @@
+body{
+    background-color: red;
+}
+
+.sharedForm .sharedFormField {
+    margin-top: 0px !important;
+}
+
+.sharedFormField {
+    clear: left;
+    margin-top: 0px !important;
+}
+.sharedForm .sharedFormField {
+    margin-top: 0px !important;
+}
+
+.title{
+    float: left;
+    margin-bottom: 0px;
+    font-size: 12px !important;
+}
+
+.formName{
+    font-size: 1px !important;
+    line-height: 0px !important;
+}
+
+.formHeader{
+ padding: 0px !important;
+}
+
+.formSubmit{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.description{
+    font-size: 9px !important;
+}
+
+div.sharedFormField:nth-child(3){
+    display: none;
+}
