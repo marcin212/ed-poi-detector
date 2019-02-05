@@ -25,15 +25,20 @@ compileKotlin {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib"
-// https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j
     compile group: 'net.sourceforge.tess4j', name: 'tess4j', version: '4.3.1'
-// https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv-platform
-    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv-platform', version: '4.0.1-1.4.4'
     compile 'no.tornado:tornadofx:1.7.17'
-    implementation 'com.google.code.gson:gson:2.8.5'
-// https://mvnrepository.com/artifact/info.debatty/java-string-similarity
-    compile group: 'info.debatty', name: 'java-string-similarity', version: '1.1.0'
-    // https://mvnrepository.com/artifact/khttp/khttp
+    compile 'com.google.code.gson:gson:2.8.5'
     compile group: 'khttp', name: 'khttp', version: '0.1.0'
+}
 
+def mainClassName = "com.bymarcin.automatedscoutingreport.MainKt"
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }

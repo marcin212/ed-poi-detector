@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="210.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="cmdrName" minWidth="100.0" prefHeight="25.0" prefWidth="100.0" text="CMDR Name" />
+                  <TextField fx:id="cmdrName" minWidth="300.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label minWidth="100.0" prefHeight="25.0" prefWidth="100.0" text="Screenshots Path" />
+                  <TextField fx:id="screenshotPath" minWidth="300.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="35.0">
+               <children>
+                  <Label minWidth="100.0" prefHeight="25.0" prefWidth="100.0" text="E:D Logs Path" />
+                  <TextField fx:id="logPath" minWidth="300.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="85.0">
+               <children>
+                  <Label minWidth="100.0" prefHeight="25.0" prefWidth="100.0" text="Region" />
+                  <TextField fx:id="region" minWidth="300.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="85.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onSaveForm" text="Save">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onCancelForm" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
